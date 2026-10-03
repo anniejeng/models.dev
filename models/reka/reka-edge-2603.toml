@@ -2,9 +2,11 @@
 # https://huggingface.co/RekaAI/reka-edge-2603 (Reka Edge 2603 license; Hub createdAt 2026-03-11)
 # https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai
 # https://developer.reka.ai/models (16,384-token context)
-# limit.output: no published figure. Set to the largest single completion
-# demonstrated on Reka's API (10,382 tokens, 2026-10-02), rounded down. The
-# serving backend itself accepts max_tokens up to context minus prompt.
+# limit.output: max_completion_tokens declared by Reka's endpoint on OpenRouter
+# (https://openrouter.ai/rekaai/reka-edge, accessed 2026-10-03); matches
+# providers/openrouter/models/rekaai/reka-edge.toml. Reka's own API accepts
+# max_tokens up to context minus prompt; a 10,382-token completion was
+# demonstrated there on 2026-10-02.
 # Model card: "the model does not currently support reasoning".
 name = "Reka Edge 2603"
 description = "Efficient 7B multimodal model for physical AI with image and video understanding, object detection, and tool use"
@@ -21,7 +23,7 @@ license = "Reka Edge 2603 License"
 
 [limit]
 context = 16_384
-output = 10_000
+output = 14_745
 
 [modalities]
 input = ["text", "image", "video"]
