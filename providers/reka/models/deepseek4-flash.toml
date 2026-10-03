@@ -1,4 +1,4 @@
-# Pricing from https://developer.reka.ai/models (accessed 2026-10-02).
+# Pricing from https://developer.reka.ai/models (accessed 2026-10-03).
 # Context: 1,048,576 tokens, verified 2026-10-02 against the live API
 # (context_length_exceeded error names the limit). Output cap not published.
 # Effort: reasoning_effort = none|low|high|max. Unlike DeepSeek's own API,

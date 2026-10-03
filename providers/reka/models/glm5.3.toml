@@ -1,4 +1,4 @@
-# Pricing as of 2026-10-02.
+# Pricing from https://developer.reka.ai/models (accessed 2026-10-03).
 # Context: 262,144 tokens, verified 2026-10-02 against the live API.
 # Effort: reasoning_effort = low|high|max. Thinking is always on; "none" is
 # accepted but maps to low. Verified 2026-10-02.
@@ -11,9 +11,9 @@ reasoning_options = [{ type = "effort", values = ["low", "high", "max"] }]
 field = "reasoning_content"
 
 [cost]
-input = 1.17
-output = 3.96
-cache_read = 0.234
+input = 1.15
+output = 3.50
+cache_read = 0.10
 
 [limit]
 context = 262_144
