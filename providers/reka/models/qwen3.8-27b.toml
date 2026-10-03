@@ -1,8 +1,14 @@
 # Pricing as of 2026-10-02.
 # Context: 262,144 tokens (lab default), verified 2026-10-02 against the live API.
 # Effort: reasoning_effort = none|low|medium|xhigh. Thinking is off unless an
-# effort is sent; "none" is also off. high/max alias to xhigh, minimal to low.
-# Verified 2026-10-02.
+# effort is sent; "none" is also off (live 2026-10-02: 0 reasoning tokens with
+# none vs 597 with xhigh). The gateway maps none to enable_thinking=false;
+# Alibaba's enable_thinking and thinking_budget request fields are ignored
+# (live 2026-10-02: thinking_budget=60 and enable_thinking=false both ran to
+# the max_tokens cap), so effort-only with none per AGENTS.md; no toggle or
+# budget_tokens. The backend
+# names the tiers ("Supported types are xhigh (default), medium, and low");
+# high/max alias to xhigh, minimal to low.
 # interleaved = true: the trace is returned in message.reasoning, which the
 # schema cannot name, rather than message.reasoning_content.
 # Image input verified 2026-10-02; modalities inherited from the lab entry.

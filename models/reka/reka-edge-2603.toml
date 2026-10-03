@@ -2,6 +2,9 @@
 # https://huggingface.co/RekaAI/reka-edge-2603 (Reka Edge 2603 license; Hub createdAt 2026-03-11)
 # https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai
 # https://developer.reka.ai/models (16,384-token context)
+# No separate output cap: max_tokens may be up to context minus input (the
+# serving backend rejects max_tokens only when it exceeds 16384 - prompt;
+# verified 2026-10-02), so limit.output equals the context window.
 # Model card: "the model does not currently support reasoning".
 name = "Reka Edge 2603"
 description = "Efficient 7B multimodal model for physical AI with image and video understanding, object detection, and tool use"

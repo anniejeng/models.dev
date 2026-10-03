@@ -1,8 +1,10 @@
 # Pricing from https://developer.reka.ai/models (accessed 2026-10-02).
 # Context: 262,144 tokens, verified 2026-10-02 against the live API.
-# Effort: reasoning_effort = none|low|high|max. Thinking is on by default;
-# "none" disables it. minimal/medium/xhigh are accepted as aliases of
-# low/high/max. Verified 2026-10-02.
+# Effort: reasoning_effort = none|low|high|max. Thinking is on by default.
+# Unlike Zhipu's API, this host exposes an off tier: the gateway maps "none"
+# to enable_thinking=false (live 2026-10-02: 0 reasoning tokens with none;
+# hundreds with other values). minimal/medium/xhigh are aliases of
+# low/high/max. Effort-only with none per AGENTS.md; no separate toggle.
 # interleaved = true: the trace is returned in message.reasoning, which the
 # schema cannot name, rather than message.reasoning_content.
 # Modalities: image and video input verified 2026-10-02 against the live API;

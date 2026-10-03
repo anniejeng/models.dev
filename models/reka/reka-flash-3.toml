@@ -1,6 +1,9 @@
 # Sources (accessed 2026-10-02):
 # https://huggingface.co/RekaAI/reka-flash-3 (Apache-2.0; Hub createdAt 2025-03-11)
 # https://developer.reka.ai/models (64k context; tools not supported on this model)
+# No separate output cap: max_tokens may be up to context minus input (the
+# serving backend rejects max_tokens only when it exceeds 65536 - prompt;
+# verified 2026-10-02), so limit.output equals the context window.
 # Primarily an English model with limited multilingual understanding.
 name = "Reka Flash 3"
 description = "21B general-purpose reasoning model trained from scratch for low-latency chat, coding, and instruction following"
