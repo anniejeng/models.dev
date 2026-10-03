@@ -1,0 +1,72 @@
+# Sources (accessed 2026-10-02):
+# https://huggingface.co/RekaAI/reka-edge-2603 (Reka Edge 2603 license; Hub createdAt 2026-03-11)
+# https://reka.ai/news/reka-edge-frontier-level-edge-intelligence-for-physical-ai
+# https://developer.reka.ai/models (16,384-token context)
+# Model card: "the model does not currently support reasoning".
+name = "Reka Edge 2603"
+description = "Efficient 7B multimodal model for physical AI with image and video understanding, object detection, and tool use"
+family = "reka"
+release_date = "2026-03-11"
+last_updated = "2026-03-11"
+attachment = true
+reasoning = false
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+license = "Reka Edge 2603 License"
+
+[limit]
+context = 16_384
+output = 16_384
+
+[modalities]
+input = ["text", "image", "video"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/RekaAI/reka-edge-2603"
+format = "safetensors"
+
+[[benchmarks]]
+name = "VQA-v2"
+score = 88.4
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"
+
+[[benchmarks]]
+name = "MLVU"
+score = 74.3
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"
+
+[[benchmarks]]
+name = "MMVU"
+score = 71.68
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"
+
+[[benchmarks]]
+name = "RefCOCO-A"
+score = 93.13
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"
+
+[[benchmarks]]
+name = "RefCOCO-B"
+score = 86.7
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"
+
+[[benchmarks]]
+name = "VideoHallucer"
+score = 59.57
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"
+
+[[benchmarks]]
+name = "Mobile Actions"
+score = 88.4
+metric = "accuracy"
+source = "https://huggingface.co/RekaAI/reka-edge-2603"

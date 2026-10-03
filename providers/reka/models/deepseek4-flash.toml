@@ -1,0 +1,19 @@
+# Pricing from https://developer.reka.ai/models (accessed 2026-10-02).
+# Context: 1,048,576 tokens, verified 2026-10-02 against the live API
+# (context_length_exceeded error names the limit). Output cap not published.
+# Effort: reasoning_effort = none|low|high|max. Thinking is off unless an
+# effort is sent; "none" is also off. minimal/medium/xhigh are accepted but
+# behave like low; high and max are distinct tiers. Verified 2026-10-02.
+base_model = "deepseek/deepseek-v4-flash"
+reasoning_options = [{ type = "effort", values = ["none", "low", "high", "max"] }]
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.11
+output = 0.66
+cache_read = 0.007
+
+[limit]
+context = 1_048_576

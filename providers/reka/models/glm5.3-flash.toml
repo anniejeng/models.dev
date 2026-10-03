@@ -1,0 +1,25 @@
+# Pricing from https://developer.reka.ai/models (accessed 2026-10-02).
+# Context: 262,144 tokens, verified 2026-10-02 against the live API.
+# Effort: reasoning_effort = none|low|high|max. Thinking is on by default;
+# "none" disables it. minimal/medium/xhigh are accepted as aliases of
+# low/high/max. Verified 2026-10-02.
+# interleaved = true: the trace is returned in message.reasoning, which the
+# schema cannot name, rather than message.reasoning_content.
+# Modalities: image and video input verified 2026-10-02 against the live API;
+# the lab's pdf input is not offered on this host.
+# response_format json_schema verified working 2026-10-02 (the public
+# reference omits this model from its response_format list).
+base_model = "zhipuai/glm-5.3-flash"
+interleaved = true
+reasoning_options = [{ type = "effort", values = ["none", "low", "high", "max"] }]
+
+[cost]
+input = 0.15
+output = 0.50
+cache_read = 0.03
+
+[limit]
+context = 262_144
+
+[modalities]
+input = ["text", "image", "video"]
